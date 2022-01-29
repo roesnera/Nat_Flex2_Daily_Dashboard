@@ -1,0 +1,53 @@
+.togglelightDark {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  height: 100vh;
+  margin: 20px;
+  transition: background 0.2s linear;
+}
+body.dark {
+  background-color: rgb(255, 255, 255);
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  width: 40px;
+  height: 16px;
+  background-color: var(--button-01);
+  display: flex;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  transform: scale(1.5);
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+/*  target the elemenent after the label*/
+.checkbox:checked + .label .circle {
+  transform: translateX(24px);
+}
+
+.fa-moon {
+  color: #00b4d8;
+}
+
+.fa-sun {
+  color: yellow;
+}
